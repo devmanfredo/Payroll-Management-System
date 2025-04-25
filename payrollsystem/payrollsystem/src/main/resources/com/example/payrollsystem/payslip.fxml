@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.payrollsystem.PayslipController" alignment="CENTER" spacing="20" styleClass="root">
+    <Label text="Payslip Generation" styleClass="title"/>
+
+    <HBox spacing="10">
+        <Button text="Employee Management" onAction="#goToEmployee" styleClass="nav-button"/>
+        <Button text="Salary Calculation" onAction="#goToSalary" styleClass="nav-button"/>
+        <Button text="Payroll Reports" onAction="#goToReports" styleClass="nav-button"/>
+        <Button text="Logout" onAction="#logout" styleClass="nav-button"/>
+    </HBox>
+
+    <GridPane hgap="10" vgap="10" alignment="CENTER">
+        <Label text="Employee ID:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="employeeIdField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+    </GridPane>
+
+    <Button text="Generate Payslip" onAction="#generatePayslip" styleClass="button"/>
+
+    <TextArea fx:id="payslipArea" editable="false" prefHeight="200" prefWidth="400"/>
+
+    <Button text="Export to CSV" onAction="#exportToCSV" styleClass="button"/>
+    <Button text="Export to PDF" onAction="#exportToPDF" styleClass="button"/>
+</VBox>

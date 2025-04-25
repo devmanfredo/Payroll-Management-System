@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.payrollsystem.ReportController" alignment="CENTER" spacing="20" styleClass="root">
+    <Label text="Payroll Reports &amp; Charts" styleClass="title"/>
+
+    <HBox spacing="10">
+        <Button text="Employee Management" onAction="#goToEmployee" styleClass="nav-button"/>
+        <Button text="Salary Calculation" onAction="#goToSalary" styleClass="nav-button"/>
+        <Button text="Payslip Generation" onAction="#goToPayslip" styleClass="nav-button"/>
+        <Button text="Logout" onAction="#logout" styleClass="nav-button"/>
+    </HBox>
+
+    <Button text="Generate Report" onAction="#generateReport" styleClass="button"/>
+
+    <BarChart fx:id="salaryChart" title="Salary Trends">
+        <xAxis>
+            <CategoryAxis label="Employee"/>
+        </xAxis>
+        <yAxis>
+            <NumberAxis label="Salary"/>
+        </yAxis>
+    </BarChart>
+</VBox>

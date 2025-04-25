@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import java.net.URL?>
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.payrollsystem.RegistrationController" spacing="15" alignment="CENTER"
+      styleClass="content-area" prefWidth="400" prefHeight="450">
+    <stylesheets>
+        <URL value="@styles.css" />
+    </stylesheets>
+
+    <Label text="User Registration" styleClass="form-title" />
+
+    <GridPane styleClass="grid-pane" hgap="10" vgap="15">
+        <columnConstraints>
+            <ColumnConstraints percentWidth="40" />
+            <ColumnConstraints percentWidth="60" />
+        </columnConstraints>
+
+        <Label text="Username:" styleClass="form-label" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+        <TextField fx:id="usernameField" styleClass="form-field" GridPane.rowIndex="0" GridPane.columnIndex="1" />
+
+        <Label text="Password:" styleClass="form-label" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+        <PasswordField fx:id="passwordField" styleClass="form-field" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+
+        <Label text="Role:" styleClass="form-label" GridPane.rowIndex="2" GridPane.columnIndex="0" />
+        <ComboBox fx:id="roleCombo" styleClass="form-field" GridPane.rowIndex="2" GridPane.columnIndex="1" />
+    </GridPane>
+
+    <Button text="Register" styleClass="form-button" onAction="#registerUser" />
+    <Label fx:id="statusLabel" styleClass="status-label" />
+</VBox>
